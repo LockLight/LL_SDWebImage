@@ -17,6 +17,7 @@
 @interface ViewController ()
 @property (nonatomic, strong) NSOperationQueue *queue;
 @property (nonatomic, strong) NSMutableDictionary *cacheImageList;
+@property (nonatomic, strong) NSMutableDictionary *operationList;
 @end
 
 @implementation ViewController{
@@ -39,7 +40,8 @@
     
     //实例化图片缓存字典
     _cacheImageList = [NSMutableDictionary dictionary];
-    
+    //实例化操作队列列表
+    _operationList = [NSMutableDictionary dictionary];
     [self loadData];
 }
 
@@ -65,7 +67,7 @@
         return cell;
     }
     
-    //判断沙盒内是否存在改图片
+    //判断沙盒内是否存在该图片
     NSString *path = [model.icon ll_GetImgPath];
     UIImage *sandBoxImage = [UIImage imageWithContentsOfFile:path];
     if(sandBoxImage){
@@ -81,6 +83,12 @@
     
     //MARK:仿写框架底层方法
     //异步加载网络图片
+    
+    //判断是否存在该异步操作
+    if(_operationList[model.icon] != nil){
+        return cell;
+    }
+    
     NSBlockOperation *op = [NSBlockOperation blockOperationWithBlock:^{
         UIImage *iconImage = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:model.icon]]];
         
@@ -104,6 +112,8 @@
             [self.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
         }];
     }];
+    //添加到操作列表
+    [_operationList setObject:op forKey:model.icon];
     
     //添加到操作队列
     [self.queue addOperation:op];
@@ -133,9 +143,23 @@
     
 }
 
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+    
+    //清除图片缓存
+    [_cacheImageList removeAllObjects];
+    //清除操作列表
+    [_operationList removeAllObjects];
+    
+    //清除沙盒缓存
+    NSFileManager *file = [NSFileManager defaultManager];
+
+    for (LLImageModel *model in _imgArr) {
+        NSString *path = [model.icon ll_GetImgPath];
+        [file  removeItemAtPath:path error:nil];
+    }
 }
 
 
