@@ -12,6 +12,7 @@
 #import "UIImageView+WebCache.h"
 #import "YYModel.h"
 #import "NSString+NSString_LLAddition.h"
+#import "LLImageDownloader.h"
 
 
 @interface ViewController ()
@@ -89,29 +90,39 @@
         return cell;
     }
     
-    NSBlockOperation *op = [NSBlockOperation blockOperationWithBlock:^{
-        UIImage *iconImage = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:model.icon]]];
-        
-        if(iconImage){
-            //写入沙盒
-            NSString *path = [model.icon ll_GetImgPath];
-            
-            //获取json二进制数据
-            NSData *data = [NSData dataWithContentsOfURL:[NSURL URLWithString:model.icon]];
-            
-            [data writeToFile:path atomically:YES];
-        }
-        
-        //主线程更新UI
-        [[NSOperationQueue mainQueue] addOperationWithBlock:^{
-
-            //加入图片缓存
-            [_cacheImageList setObject:iconImage forKey:model.icon];
-            //更新图片
-            //cell.imageView.image = iconImage;   不建议直接赋值
-            [self.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
-        }];
+//    NSBlockOperation *op = [NSBlockOperation blockOperationWithBlock:^{
+//        UIImage *iconImage = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:model.icon]]];
+//        
+//        if(iconImage){
+//            //写入沙盒
+//            NSString *path = [model.icon ll_GetImgPath];
+//            
+//            //获取json二进制数据
+//            NSData *data = [NSData dataWithContentsOfURL:[NSURL URLWithString:model.icon]];
+//            
+//            [data writeToFile:path atomically:YES];
+//        }
+//        
+//        //主线程更新UI
+//        [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+//
+//            //加入图片缓存
+//            [_cacheImageList setObject:iconImage forKey:model.icon];
+//            //更新图片
+//            //cell.imageView.image = iconImage;   不建议直接赋值
+//            [self.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
+//        }];
+//    }];
+    
+    //封装图片下载器操作(异步下载,存入沙盒)
+    LLImageDownloader *op = [[LLImageDownloader alloc]initWithString:model.icon andCompleteBlock:^(UIImage *iconImg) {
+        //加入图片缓存
+        [_cacheImageList setObject:iconImg forKey:model.icon];
+        //更新图片
+        //cell.imageView.image = iconImage;   不建议直接赋值
+        [self.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
     }];
+
     //添加到操作列表
     [_operationList setObject:op forKey:model.icon];
     

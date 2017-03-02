@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CD0167BE1E67BA64005A200D /* LLImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = CD0167BD1E67BA64005A200D /* LLImageDownloader.m */; };
 		CD6DCE741E66DDE5000FCE52 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CD6DCE731E66DDE5000FCE52 /* main.m */; };
 		CD6DCE771E66DDE5000FCE52 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CD6DCE761E66DDE5000FCE52 /* AppDelegate.m */; };
 		CD6DCE7A1E66DDE5000FCE52 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD6DCE791E66DDE5000FCE52 /* ViewController.m */; };
@@ -42,6 +43,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CD0167BC1E67BA64005A200D /* LLImageDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLImageDownloader.h; sourceTree = "<group>"; };
+		CD0167BD1E67BA64005A200D /* LLImageDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLImageDownloader.m; sourceTree = "<group>"; };
 		CD6DCE6F1E66DDE5000FCE52 /* 仿写SDWebImage框架(实现cell的异步加载).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "仿写SDWebImage框架(实现cell的异步加载).app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD6DCE731E66DDE5000FCE52 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CD6DCE751E66DDE5000FCE52 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -153,6 +156,8 @@
 				CD6DCED91E66DF9D000FCE52 /* LLImageModel.m */,
 				CD6DCF501E66FDA7000FCE52 /* NSString+NSString_LLAddition.h */,
 				CD6DCF511E66FDA7000FCE52 /* NSString+NSString_LLAddition.m */,
+				CD0167BC1E67BA64005A200D /* LLImageDownloader.h */,
+				CD0167BD1E67BA64005A200D /* LLImageDownloader.m */,
 			);
 			name = "仿写SDWebImage框架(实现cell的异步加载)";
 			path = "第三方框架异步加载图片";
@@ -346,6 +351,7 @@
 				CD6DCEC41E66DEB7000FCE52 /* AFURLResponseSerialization.m in Sources */,
 				CD6DCEC01E66DEB7000FCE52 /* AFHTTPSessionManager.m in Sources */,
 				CD6DCED01E66DEB7000FCE52 /* UIImage+GIF.m in Sources */,
+				CD0167BE1E67BA64005A200D /* LLImageDownloader.m in Sources */,
 				CD6DCEC71E66DEB7000FCE52 /* NSData+ImageContentType.m in Sources */,
 				CD6DCED71E66DEB7000FCE52 /* YYClassInfo.m in Sources */,
 				CD6DCED21E66DEB7000FCE52 /* UIImage+WebP.m in Sources */,
