@@ -45,7 +45,7 @@
 /* Begin PBXFileReference section */
 		CD0167BC1E67BA64005A200D /* LLImageDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLImageDownloader.h; sourceTree = "<group>"; };
 		CD0167BD1E67BA64005A200D /* LLImageDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLImageDownloader.m; sourceTree = "<group>"; };
-		CD6DCE6F1E66DDE5000FCE52 /* 仿写SDWebImage框架(实现cell的异步加载).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "仿写SDWebImage框架(实现cell的异步加载).app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD6DCE6F1E66DDE5000FCE52 /* 轮子重造(SDWebImage).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "轮子重造(SDWebImage).app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD6DCE731E66DDE5000FCE52 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CD6DCE751E66DDE5000FCE52 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CD6DCE761E66DDE5000FCE52 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -126,7 +126,7 @@
 		CD6DCE661E66DDE5000FCE52 = {
 			isa = PBXGroup;
 			children = (
-				CD6DCE711E66DDE5000FCE52 /* 仿写SDWebImage框架(实现cell的异步加载) */,
+				CD6DCE711E66DDE5000FCE52 /* 轮子重造(SDWebImage) */,
 				CD6DCE701E66DDE5000FCE52 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -134,12 +134,12 @@
 		CD6DCE701E66DDE5000FCE52 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CD6DCE6F1E66DDE5000FCE52 /* 仿写SDWebImage框架(实现cell的异步加载).app */,
+				CD6DCE6F1E66DDE5000FCE52 /* 轮子重造(SDWebImage).app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		CD6DCE711E66DDE5000FCE52 /* 仿写SDWebImage框架(实现cell的异步加载) */ = {
+		CD6DCE711E66DDE5000FCE52 /* 轮子重造(SDWebImage) */ = {
 			isa = PBXGroup;
 			children = (
 				CD6DCE891E66DEB6000FCE52 /* ThirdLib */,
@@ -159,7 +159,7 @@
 				CD0167BC1E67BA64005A200D /* LLImageDownloader.h */,
 				CD0167BD1E67BA64005A200D /* LLImageDownloader.m */,
 			);
-			name = "仿写SDWebImage框架(实现cell的异步加载)";
+			name = "轮子重造(SDWebImage)";
 			path = "第三方框架异步加载图片";
 			sourceTree = "<group>";
 		};
@@ -256,9 +256,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		CD6DCE6E1E66DDE5000FCE52 /* 仿写SDWebImage框架(实现cell的异步加载) */ = {
+		CD6DCE6E1E66DDE5000FCE52 /* 轮子重造(SDWebImage) */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CD6DCE861E66DDE5000FCE52 /* Build configuration list for PBXNativeTarget "仿写SDWebImage框架(实现cell的异步加载)" */;
+			buildConfigurationList = CD6DCE861E66DDE5000FCE52 /* Build configuration list for PBXNativeTarget "轮子重造(SDWebImage)" */;
 			buildPhases = (
 				CD6DCE6B1E66DDE5000FCE52 /* Sources */,
 				CD6DCE6C1E66DDE5000FCE52 /* Frameworks */,
@@ -268,9 +268,9 @@
 			);
 			dependencies = (
 			);
-			name = "仿写SDWebImage框架(实现cell的异步加载)";
+			name = "轮子重造(SDWebImage)";
 			productName = "第三方框架异步加载图片";
-			productReference = CD6DCE6F1E66DDE5000FCE52 /* 仿写SDWebImage框架(实现cell的异步加载).app */;
+			productReference = CD6DCE6F1E66DDE5000FCE52 /* 轮子重造(SDWebImage).app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -289,7 +289,7 @@
 					};
 				};
 			};
-			buildConfigurationList = CD6DCE6A1E66DDE5000FCE52 /* Build configuration list for PBXProject "仿写SDWebImage框架(实现cell的异步加载)" */;
+			buildConfigurationList = CD6DCE6A1E66DDE5000FCE52 /* Build configuration list for PBXProject "轮子重造(SDWebImage)" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -302,7 +302,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				CD6DCE6E1E66DDE5000FCE52 /* 仿写SDWebImage框架(实现cell的异步加载) */,
+				CD6DCE6E1E66DDE5000FCE52 /* 轮子重造(SDWebImage) */,
 			);
 		};
 /* End PBXProject section */
@@ -495,7 +495,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		CD6DCE6A1E66DDE5000FCE52 /* Build configuration list for PBXProject "仿写SDWebImage框架(实现cell的异步加载)" */ = {
+		CD6DCE6A1E66DDE5000FCE52 /* Build configuration list for PBXProject "轮子重造(SDWebImage)" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CD6DCE841E66DDE5000FCE52 /* Debug */,
@@ -504,7 +504,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CD6DCE861E66DDE5000FCE52 /* Build configuration list for PBXNativeTarget "仿写SDWebImage框架(实现cell的异步加载)" */ = {
+		CD6DCE861E66DDE5000FCE52 /* Build configuration list for PBXNativeTarget "轮子重造(SDWebImage)" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CD6DCE871E66DDE5000FCE52 /* Debug */,

@@ -40,7 +40,7 @@
         [data writeToFile:path atomically:YES];
     }
 
-    NSLog(@"img = %@, %@",iconImage,[NSThread currentThread]);
+//    NSLog(@"img = %@, %@",iconImage,[NSThread currentThread]);
     
     //更新UI
     [[NSOperationQueue mainQueue] addOperationWithBlock:^{
